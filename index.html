@@ -1,26 +1,28 @@
 <body>
 
-<h1>Welcome all to this website :)</h1>
-<table id="patient_table">
-  <tr>
-    <th>patient_id</th>
-    <th>patient_name</th>
-    <th>patient_height</th>
-   <th>patient_physician_note</th>
-   <th>patient_physician</th>
-   <th>dob</th>
+  <h1>Welcome all to this website :)</h1>
 
-forEach(let row in array) {
-  $('#patient_table').append(`<tr>
-        <td>${row.patient_id}</td>
-        <td>${row.patient_name}</td>
-        <td>${row.patient_height}</td>
-        <td>${row.patient_physician_note}</td>
-        <td>${row.patient_physician}</td>
-        <td>${row.dob}</td>
-    </tr>`);
-}
-  </tr>
-</table>
+
+  <form method="POST" action="{{url_for('patient_table')}}">
+      <p>Patient's ID</p>
+      <input type="text" name="patient_id" required>
+
+      <p>Patient's Name</p>
+      <input type="text" name="patient_name" required>
+
+      <p>Patient's Height</p>
+      <input type="text" name="patient_height" required>
+
+      <p>Physician's Note</p>
+      <input type="text" name="patient_physician_note" required>
+
+      <p>Patient's Physician</p>
+      <input type="text" name="patient_physician" required>
+
+      <p>DOB</p>
+      <input type="text" name="dob" required> <br><br>
+
+      <input type="submit" name="submitBtn" id="submitBtn" value="Submit">
+  </form>
 
 </body>

@@ -42,4 +42,15 @@ con.connect(function(err) {
   });
 }); 
 
+// UPDATE
+con.connect(function(err) {
+  if (err) throw err;
+  var sql = "UPDATE patient SET patient_physician = 'Dr Sara.P.Jason' WHERE patient_id = 2";
+  con.query(sql, function (err, result) {
+    if (err) throw err;
+    console.log(result.affectedRows + " record(s) updated");
+  });
+}) 
+
+
 

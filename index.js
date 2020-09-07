@@ -32,3 +32,14 @@ con.connect(function(err) {
   });
 });
 
+// DELETE
+con.connect(function(err) {
+  if (err) throw err;
+  var sql = "DELETE FROM patient WHERE patient_id = 1";
+  con.query(sql, function (err, result) {
+    if (err) throw err;
+    console.log("Number of records deleted: " + result.affectedRows);
+  });
+}); 
+
+

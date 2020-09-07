@@ -1,0 +1,26 @@
+<body>
+
+<h1>Welcome all to this website :)</h1>
+<table id="patient_table">
+  <tr>
+    <th>patient_id</th>
+    <th>patient_name</th>
+    <th>patient_height</th>
+   <th>patient_physician_note</th>
+   <th>patient_physician</th>
+   <th>dob</th>
+
+forEach(let row in array) {
+  $('#patient_table').append(`<tr>
+        <td>${row.patient_id}</td>
+        <td>${row.patient_name}</td>
+        <td>${row.patient_height}</td>
+        <td>${row.patient_physician_note}</td>
+        <td>${row.patient_physician}</td>
+        <td>${row.dob}</td>
+    </tr>`);
+}
+  </tr>
+</table>
+
+</body>
